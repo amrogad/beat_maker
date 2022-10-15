@@ -27,8 +27,7 @@ class _SoundButtonState extends State<SoundButton> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      enableFeedback: false,
+    return GestureDetector(
       onTap: () {
         setState(() {
           mainColor = Colors.redAccent;
