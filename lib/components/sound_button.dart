@@ -14,14 +14,14 @@ class SoundButton extends StatefulWidget {
 }
 
 class _SoundButtonState extends State<SoundButton> {
-  late Color mainColor;
-  late Color sideColor;
+  late Color _mainColor;
+  late Color _sideColor;
   final player = AudioPlayer();
 
   @override
   void initState() {
-    mainColor = widget.mainColor;
-    sideColor = widget.sideColor;
+    _mainColor = widget.mainColor;
+    _sideColor = widget.sideColor;
     super.initState();
   }
 
@@ -30,15 +30,15 @@ class _SoundButtonState extends State<SoundButton> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          mainColor = Colors.redAccent;
-          sideColor = Colors.red;
+          _mainColor = Colors.redAccent;
+          _sideColor = Colors.red;
           player.play(AssetSource(widget.note));
         });
       },
       child: AnimatedContainer(
         decoration: BoxDecoration(
             border: Border.all(width: 1),
-            gradient: RadialGradient(colors: [mainColor, sideColor]),
+            gradient: RadialGradient(colors: [_mainColor, _sideColor]),
             boxShadow: const [
               BoxShadow(
                 blurRadius: 1.0,
@@ -58,8 +58,8 @@ class _SoundButtonState extends State<SoundButton> {
 
   void Reset() {
     setState(() {
-      mainColor = widget.mainColor;
-      sideColor = widget.sideColor;
+      _mainColor = widget.mainColor;
+      _sideColor = widget.sideColor;
     });
   }
 }

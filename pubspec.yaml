@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.0.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -67,6 +68,8 @@ flutter:
   assets:
     - assets/images/
     - assets/sounds/
+    - assets/sounds/drums/
+    - assets/sounds/piano/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
