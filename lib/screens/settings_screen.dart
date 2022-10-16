@@ -28,22 +28,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               Text(
                 'Soundpack:',
-                style:
-                    GoogleFonts.anton(color: Colors.lime, fontSize: 36),
+                style: GoogleFonts.anton(color: Colors.lime, fontSize: 36),
               ),
               SizedBox(
                 height: 5,
               ),
               InkWell(
                 onTap: () {
-                  SoundsBottomSheet();
+                  BottomSheet();
                 },
                 child: Container(
                     padding: EdgeInsets.all(6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(width: 3, color: Colors.lime)),
-                    child: Text(provider.note1=='sounds/drums/kick1.wav'?'Drums' : 'Piano',
+                    child: Text(
+                        provider.note1 == 'sounds/drums/kick1.wav'
+                            ? 'Drums'
+                            : 'Piano',
                         style: GoogleFonts.anton(
                             color: Colors.lime, fontSize: 24))),
               ),
@@ -54,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  void SoundsBottomSheet() {
+  void BottomSheet() {
     showModalBottomSheet(
         backgroundColor: Colors.transparent,
         context: context,

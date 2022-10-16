@@ -53,7 +53,8 @@ class OpenBottomSheet extends StatelessWidget {
                 );
                 Navigator.pop(context);
               },
-              child: isSelected('Drums', provider.note1=='sounds/drums/kick1.wav'?true:false)),
+              child: isSelected('Drums',
+                  provider.note1 == 'sounds/drums/kick1.wav' ? true : false)),
           Container(
             width: double.infinity,
             height: 3,
@@ -96,7 +97,8 @@ class OpenBottomSheet extends StatelessWidget {
                 );
                 Navigator.pop(context);
               },
-              child: isSelected('Piano', provider.note1=='sounds/piano/key1.mp3'?true:false)),
+              child: isSelected('Piano',
+                  provider.note1 == 'sounds/piano/key1.mp3' ? true : false)),
         ],
       ),
     );
@@ -106,13 +108,13 @@ class OpenBottomSheet extends StatelessWidget {
     if (selected) {
       return Padding(
         padding: EdgeInsets.all(6),
-        child: Text('$text',
+        child: Text(text,
             style: GoogleFonts.anton(color: Colors.lime, fontSize: 24)),
       );
     } else {
       return Padding(
         padding: EdgeInsets.all(6),
-        child: Text('$text',
+        child: Text(text,
             style: GoogleFonts.anton(color: Colors.white, fontSize: 24)),
       );
     }
