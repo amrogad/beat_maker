@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyProvider extends ChangeNotifier {
+class SoundProvider extends ChangeNotifier {
   String note1 = 'sounds/drums/kick1.wav';
   String note2 = 'sounds/drums/kick2.wav';
   String note3 = 'sounds/drums/kick3.wav';

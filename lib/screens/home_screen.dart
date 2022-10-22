@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled/providers/provider.dart';
+import 'package:untitled/providers/icon_provider.dart';
+import 'package:untitled/providers/sound_provider.dart';
 import 'package:untitled/screens/settings_screen.dart';
 import 'package:untitled/components/sound_button.dart';
 
@@ -10,7 +11,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<MyProvider>(context);
+    var soundProvider = Provider.of<SoundProvider>(context);
+    var iconProvider = Provider.of<IconProvider>(context);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
@@ -25,7 +27,8 @@ class HomeScreen extends StatelessWidget {
           actions: [
             GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingsScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SettingsScreen()));
                 },
                 child: Icon(
                   Icons.settings,
@@ -43,34 +46,62 @@ class HomeScreen extends StatelessWidget {
             crossAxisCount: 4,
           ),
           children: [
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note1),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note2),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note3),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note4),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note5),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note6),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note7),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note8),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note9),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note10),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note11),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note12),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note13),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note14),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note15),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note16),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note17),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note18),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note19),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note20),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note21),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note22),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note23),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note24),
-            SoundButton(Colors.deepPurpleAccent, Colors.deepPurple, provider.note25),
-            SoundButton(Colors.yellowAccent, Colors.orangeAccent, provider.note26),
-            SoundButton(Colors.cyanAccent, Colors.blue, provider.note27),
-            SoundButton(Colors.lime, Colors.lightGreen, provider.note28),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note1),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note2),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note3),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note4),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note5),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note6),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note7),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note8),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note9),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note10),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note11),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note12),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note13),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note14),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note15),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note16),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note17),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note18),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note19),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note20),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note21),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note22),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note23),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note24),
+            SoundButton(iconProvider.primary1, iconProvider.secondary1,
+                soundProvider.note25),
+            SoundButton(iconProvider.primary2, iconProvider.secondary2,
+                soundProvider.note26),
+            SoundButton(iconProvider.primary3, iconProvider.secondary3,
+                soundProvider.note27),
+            SoundButton(iconProvider.primary4, iconProvider.secondary4,
+                soundProvider.note28),
           ],
         ),
       ),

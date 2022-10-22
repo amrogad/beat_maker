@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled/providers/provider.dart';
+import 'package:untitled/providers/sound_provider.dart';
 
-class OpenBottomSheet extends StatelessWidget {
-  const OpenBottomSheet({Key? key}) : super(key: key);
+class OpenSoundBottomSheet extends StatelessWidget {
+  const OpenSoundBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<MyProvider>(context);
+    var soundProvider = Provider.of<SoundProvider>(context);
     return Container(
       height: 106,
       decoration: BoxDecoration(
@@ -21,7 +21,7 @@ class OpenBottomSheet extends StatelessWidget {
         children: [
           InkWell(
               onTap: () {
-                provider.changeSounds(
+                soundProvider.changeSounds(
                   'sounds/drums/kick1.wav',
                   'sounds/drums/kick2.wav',
                   'sounds/drums/kick3.wav',
@@ -53,8 +53,11 @@ class OpenBottomSheet extends StatelessWidget {
                 );
                 Navigator.pop(context);
               },
-              child: isSelected('Drums',
-                  provider.note1 == 'sounds/drums/kick1.wav' ? true : false)),
+              child: isSelected(
+                  'Drums',
+                  soundProvider.note1 == 'sounds/drums/kick1.wav'
+                      ? true
+                      : false)),
           Container(
             width: double.infinity,
             height: 3,
@@ -65,7 +68,7 @@ class OpenBottomSheet extends StatelessWidget {
           ),
           InkWell(
               onTap: () {
-                provider.changeSounds(
+                soundProvider.changeSounds(
                   'sounds/piano/key1.mp3',
                   'sounds/piano/key2.mp3',
                   'sounds/piano/key3.mp3',
@@ -97,8 +100,11 @@ class OpenBottomSheet extends StatelessWidget {
                 );
                 Navigator.pop(context);
               },
-              child: isSelected('Piano',
-                  provider.note1 == 'sounds/piano/key1.mp3' ? true : false)),
+              child: isSelected(
+                  'Piano',
+                  soundProvider.note1 == 'sounds/piano/key1.mp3'
+                      ? true
+                      : false)),
         ],
       ),
     );
