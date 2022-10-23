@@ -7,11 +7,9 @@ import 'package:untitled/screens/settings_screen.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(
-      create: (_) => SoundProvider(),
+    ChangeNotifierProvider<SoundProvider>(create: (_) => SoundProvider(),
     ),
-    ChangeNotifierProvider(
-      create: (_) => IconProvider(),
+    ChangeNotifierProvider<IconProvider>(create: (_) => IconProvider(),
     ),
   ], child: MyApp()));
 }

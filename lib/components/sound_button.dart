@@ -22,6 +22,7 @@ class _SoundButtonState extends State<SoundButton> {
   void initState() {
     _mainColor = widget.mainColor;
     _sideColor = widget.sideColor;
+
     super.initState();
   }
 
