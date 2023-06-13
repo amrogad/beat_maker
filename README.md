@@ -1,4 +1,4 @@
-Beat maker app to create your own beats but actually just to show some coding skills.
+First app ever, just a way to show code organization and ability to use audio packages.
 
 Using Provider state management to change the audio files from drums to piano and vice versa.
 
